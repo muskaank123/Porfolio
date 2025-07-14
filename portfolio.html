@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muskaan Khan | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Research Slider Enhancements */
+    .research-slider {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .research-slide {
+      display: none;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .research-slide.active {
+      display: flex;
+    }
+    .research-slide img {
+      width: 50%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .research-slide .slide-content {
+      flex: 1;
+    }
+    .research-slide .slide-content h3 {
+      margin-bottom: 0.5rem;
+      color: #2575fc;
+    }
+    .research-slide .slide-content p {
+      margin-bottom: 1rem;
+    }
+    .slide-content a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #2575fc;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .slide-content a:hover {
+      background-color: #6a11cb;
+    }
+    .slider-controls {
+      text-align: center;
+    }
+    .slider-controls button {
+      background: #2575fc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .slider-controls button:hover {
+      background-color: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muskaan Khan</h1>
+    <p>Psychology Major | Researcher | Educator</p>
+    <div class="cta-buttons">
+      <a href="https://drive.google.com/file/d/1Vazmg7Cn8kQEQsqgwVBLelX9kQ2BWNlG/view?usp=sharing" target="_blank">View CV</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </header>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/profile.jpg" alt="Muskaan Khan Photo">
+      <div class="about-text">
+        <p>Graduated with a Bachelor of Science (Hons) in Psychology from Forman Christian College, earning a CGPA of 3.75, along with a minor in Philosophy. Deeply passionate about the field of Neuroscience, particularly its intersection with Psychology and its potential to inform evidence-based research and interventions. Committed to using academic knowledge and research skills to contribute to community development, with a strong focus on education, mental health awareness, and advocacy for underrepresented populations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Teaching Assistant</strong> – FCCU (2024–2025)</li>
+      <li><strong>Philosophy Journal Editor</strong> – FCCU (2025)</li>
+      <li><strong>SEL Trainer</strong> – Daadras (2024)</li>
+      <li><strong>Clinical Psychology Intern</strong> – PIMH (2024)</li>
+      <li><strong>Tutor (Preply & IBA)</strong> – (2022–Present)</li>
+    </ul>
+  </section>
+
+  <section id="research" class="fade-in">
+    <h2>Research</h2>
+    <div class="research-slider">
+      <div class="research-slide active">
+        <img src="images/pills.jpg" alt="Research Image 1">
+        <div class="slide-content">
+          <h3>Qualitative Paper</h3>
+          <p>The Lived Experiences of University Students with Chronic Illness</p>
+          <a href="https://drive.google.com/file/d/1wwEvpUytOzHggRHf172zPF-up3pSiZRD/view?usp=drive_link">Click here to view</a>
+        </div>
+      </div>
+      <div class="research-slide">
+        <img src="images/chatGPT.png" alt="Research Image 3">
+        <div class="slide-content">
+          <h3>Quantitative Paper</h3>
+          <p>The Use of ChatGPT in Academia: Students' Perception, Experiences, and Frequency of Use</p>
+          <a href="https://drive.google.com/file/d/1axRQENV3Gf83skeo9-oQakd3CP6_TF8C/view?usp=drive_link">Click here to view</a>
+        </div>
+      </div>
+      <div class="research-slide">
+        <img src="images/social.jpg" alt="Research Image 4">
+        <div class="slide-content">
+          <h3>Quantitative Paper</h3>
+          <p>Social Media’s Absurd Beauty Standards Affecting Our Youth</p>
+          <a href="https://drive.google.com/file/d/1dWjQ3gG-rt2Y7B21aluimmuKaA0SWR0X/view?usp=drive_link">Click here to view</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button onclick="changeSlide(-1)">&lt; Prev</button>
+      <button onclick="changeSlide(1)">Next &gt;</button>
+    </div>
+  </section>
+
+  <section id="achievements" class="fade-in">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Vice Rector’s List (2021–2024)</li>
+      <li>President – Armacost Psychological Society (2023–2024)</li>
+      <li>General Secretary – APS (2022–2023)</li>
+      <li>Head of Writer’s Guild – Ewing English Society</li>
+      <li>WWF Community Service (2021)</li>
+      <li>Toyota 5s Eco Program (2021)</li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Medical Neuroscience – Duke University (In Progress)</li>
+      <li>Healing Through Hypnosis – FCCU</li>
+      <li>Nutrition & Wellness – LUMS</li>
+      <li>Climate Finance & Mitigation – FCCU</li>
+      <li>Use of Gen-AI in Teaching – Beyond Stress</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>Exceptional Leadership</li>
+      <li>Interpersonal Communication</li>
+      <li>Effective Teamwork</li>
+      <li>Active Listening</li>
+      <li>Project & People Management</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:muskaan.shoaib30@gmail.com">muskaan.shoaib30@gmail.com</a></p>
+    <p>Phone: +92 308 4558877</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/muskaan-khan-245aa02a1" target="_blank">muskaan-khan</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Muskaan Khan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.research-slide');
+
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
+
+  <script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight - 100 // 100px threshold before appearing
+    );
+  }
+
+  function handleScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach((el) => {
+      if (isInViewport(el)) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+</script>
+
+
+</body>
+</html>
